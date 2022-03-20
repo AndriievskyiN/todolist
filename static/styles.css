@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(120deg,#f6d365,#fda085);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header,
+form{
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button{
+    color: black;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: black;
+    color: white; 
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 19%;
+}
+
+.todo-list{
+    list-style: none;
+    min-width: 30%;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s;
+}
+
+.todo li{
+    flex: 1;
+    width: 600px;
+}
+
+
+.completed-btn, .trash-btn{
+    border: none;
+    background: #ff6f47;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.completed-btn{
+    background: rgb(46, 170, 46);
+}
+
+.trash-btn:hover{
+    background: white;
+    color: #ff6f47;
+}
+
+.completed-btn:hover{
+    background: white;
+    color: rgb(46, 170, 46);
+}
+
+.alert{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80% ;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.fa-trash, .fa-check{
+    /* now we can't click on the icons */
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.disappear{
+    transform: translateZ(8rem) rotateZ(30deg);
+    opacity: 0;
+}
+
+/*CUSTOM SELECTOR */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+  }
+  
+  /* Custom Select */
+  .select {
+    margin: 1.7rem;
+    position: relative;
+    overflow: hidden;
+  }
+  select {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    width: 12rem;
+    padding: 0.3rem;
+  }
+  /* Arrow */
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background: black;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    border-bottom-right-radius: 15%;
+    border-top-right-radius: 10%;
+  }
+  /* Transition */
+  
+  .select:hover::after {
+    background-color: white;
+    color: black
+  }
